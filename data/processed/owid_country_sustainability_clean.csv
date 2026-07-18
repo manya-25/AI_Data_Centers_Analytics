@@ -1,0 +1,221 @@
+country,year,iso_code,carbon_intensity_elec,electricity_generation,fossil_share_elec,low_carbon_share_elec,renewables_share_elec,country_epoch
+Comoros,2023,COM,642.86,0.14,100.0,0.0,0.0,Comoros
+Dominica,2023,DMA,600.0,0.15,86.667,13.333,13.333,Dominica
+Faroe Islands,2023,FRO,346.94,0.49,53.061,46.939,46.939,Faroe Islands
+Falkland Islands,2023,FLK,1000.0,0.01,100.0,0.0,0.0,Falkland Islands
+French Guiana,2023,GUF,244.9,0.98,34.694,65.306,65.306,French Guiana
+Sao Tome and Principe,2023,STP,555.56,0.09,88.889,11.111,11.111,Sao Tome and Principe
+Saint Pierre and Miquelon,2023,SPM,600.0,0.05,100.0,0.0,0.0,Saint Pierre and Miquelon
+Saint Helena,2023,SHN,1000.0,0.01,100.0,0.0,0.0,Saint Helena
+Central African Republic,2023,CAF,0.0,0.14,0.0,100.0,100.0,Central African Republic
+Guadeloupe,2023,GLP,497.01,1.67,64.671,35.329,35.329,Guadeloupe
+Reunion,2023,REU,394.14,3.07,43.322,56.678,56.678,Reunion
+Northern Mariana Islands,2023,MNP,,,,,,Northern Mariana Islands
+Niue,2023,NIU,,0.0,,,,Niue
+British Virgin Islands,2023,VGB,647.06,0.17,100.0,0.0,0.0,British Virgin Islands
+Micronesia (country),2023,FSM,,,,,,Micronesia (country)
+Martinique,2023,MTQ,529.8,1.51,74.172,25.828,25.828,Martinique
+Western Sahara,2023,ESH,,,,,,Western Sahara
+Vanuatu,2023,VUT,500.0,0.08,75.0,25.0,25.0,Vanuatu
+United States Virgin Islands,2023,VIR,632.35,0.68,97.059,2.941,2.941,United States Virgin Islands
+Tuvalu,2023,TUV,,,,,,Tuvalu
+Antarctica,2023,ATA,,,,,,Antarctica
+Algeria,2024,DZA,632.94,96.36,98.931,1.069,1.069,Algeria
+American Samoa,2024,ASM,611.11,0.18,94.444,5.556,5.556,American Samoa
+Angola,2024,AGO,185.38,15.59,26.299,73.701,73.701,Angola
+Antigua and Barbuda,2024,ATG,594.6,0.37,91.892,8.108,8.108,Antigua and Barbuda
+Turkmenistan,2024,TKM,1306.27,33.01,99.97,0.03,0.03,Turkmenistan
+Turks and Caicos Islands,2024,TCA,629.63,0.27,96.296,3.704,3.704,Turks and Caicos Islands
+Trinidad and Tobago,2024,TTO,681.68,9.55,99.895,0.105,0.105,Trinidad and Tobago
+Afghanistan,2024,AFG,131.31,0.99,13.131,86.869,86.869,Afghanistan
+Libya,2024,LBY,826.83,34.59,99.971,0.029,0.029,Libya
+Macao,2024,MAC,474.36,0.78,69.231,30.769,30.769,Macao
+Madagascar,2024,MDG,432.1,2.43,57.613,42.387,42.387,Madagascar
+Malawi,2024,MWI,54.65,1.83,4.372,95.628,95.628,Malawi
+Maldives,2024,MDV,611.77,0.85,92.941,7.059,7.059,Maldives
+Mali,2024,MLI,538.59,5.96,80.537,19.463,19.463,Mali
+Mauritania,2024,MRT,512.08,2.07,77.295,22.705,22.705,Mauritania
+Mauritius,2024,MUS,642.23,3.41,82.111,17.889,17.889,Mauritius
+Burkina Faso,2024,BFA,562.13,1.69,82.84,17.16,17.16,Burkina Faso
+Burundi,2024,BDI,183.67,0.49,24.49,75.51,75.51,Burundi
+Cameroon,2024,CMR,225.9,7.26,26.86,73.14,73.14,Cameroon
+Lebanon,2024,LBN,389.51,5.34,56.18,43.82,43.82,Lebanon
+Lesotho,2024,LSO,,0.0,,,,Lesotho
+Liberia,2024,LBR,315.79,0.57,45.614,54.386,54.386,Liberia
+Montserrat,2024,MSR,1000.0,0.01,100.0,0.0,0.0,Montserrat
+Mozambique,2024,MOZ,129.36,19.79,16.574,83.426,83.426,Mozambique
+Myanmar,2024,MMR,502.99,21.71,52.142,47.858,47.858,Myanmar
+Namibia,2024,NAM,48.78,1.64,2.439,97.561,97.561,Namibia
+Nauru,2024,NRU,600.0,0.05,80.0,20.0,20.0,Nauru
+Kiribati,2024,KIR,500.0,0.04,75.0,25.0,25.0,Kiribati
+Laos,2024,LAO,232.08,52.31,23.284,76.716,76.716,Laos
+Nepal,2024,NPL,24.26,11.13,0.0,100.0,100.0,Nepal
+Netherlands Antilles,2024,ANT,,,,,,Netherlands Antilles
+New Caledonia,2024,NCL,560.9,3.12,73.077,26.923,26.923,New Caledonia
+Nicaragua,2024,NIC,300.89,4.52,37.611,62.389,62.389,Nicaragua
+Bhutan,2024,BTN,23.64,11.0,0.0,100.0,100.0,Bhutan
+Iraq,2024,IRQ,683.1,149.73,98.377,1.623,1.623,Iraq
+Yemen,2024,YEM,592.38,5.25,88.762,11.238,11.238,Yemen
+Jamaica,2024,JAM,563.01,4.92,87.398,12.602,12.602,Jamaica
+Jordan,2024,JOR,529.79,23.67,75.919,24.081,24.081,Jordan
+Botswana,2024,BWA,851.31,3.43,99.708,0.292,0.292,Botswana
+Brunei,2024,BRN,892.09,5.56,99.82,0.18,0.18,Brunei
+Niger,2024,NER,673.68,0.95,96.842,3.158,3.158,Niger
+Haiti,2024,HTI,534.88,0.86,81.395,18.605,18.605,Haiti
+Honduras,2024,HND,322.12,12.48,44.551,55.449,55.449,Honduras
+Hong Kong,2024,HKG,675.48,37.44,98.958,1.042,1.042,Hong Kong
+Iceland,2024,ISL,27.82,19.05,0.0,100.0,100.0,Iceland
+Indonesia,2024,IDN,680.25,371.54,81.91,18.09,18.09,Indonesia
+North Korea,2024,PRK,340.59,27.1,36.642,63.358,63.358,North Korea
+Palestine,2024,PSE,414.14,0.99,60.606,39.394,39.394,Palestine
+Panama,2024,PAN,221.15,13.43,32.018,67.982,67.982,Panama
+Papua New Guinea,2024,PNG,513.74,4.73,76.321,23.679,23.679,Papua New Guinea
+Chad,2024,TCD,621.62,0.37,94.595,5.405,5.405,Chad
+Guatemala,2024,GTM,301.46,15.79,31.666,68.334,68.334,Guatemala
+Guinea,2024,GIN,181.14,4.03,24.814,75.186,75.186,Guinea
+Guinea-Bissau,2024,GNB,625.0,0.08,100.0,0.0,0.0,Guinea-Bissau
+Guyana,2024,GUY,644.93,1.38,97.101,2.899,2.899,Guyana
+Gibraltar,2024,GIB,590.91,0.22,100.0,0.0,0.0,Gibraltar
+Greenland,2024,GRL,150.0,0.6,16.667,83.333,83.333,Greenland
+Grenada,2024,GRD,666.67,0.24,100.0,0.0,0.0,Grenada
+Guam,2024,GUM,607.53,1.86,91.398,8.602,8.602,Guam
+Cape Verde,2024,CPV,461.54,0.52,69.231,30.769,30.769,Cape Verde
+Cayman Islands,2024,CYM,633.8,0.71,95.775,4.225,4.225,Cayman Islands
+Rwanda,2024,RWA,353.98,1.13,50.442,49.558,49.558,Rwanda
+Saint Kitts and Nevis,2024,KNA,608.7,0.23,91.304,8.696,8.696,Saint Kitts and Nevis
+Saint Lucia,2024,LCA,650.0,0.4,97.5,2.5,2.5,Saint Lucia
+Saint Vincent and the Grenadines,2024,VCT,600.0,0.15,86.667,13.333,13.333,Saint Vincent and the Grenadines
+Samoa,2024,WSM,375.0,0.16,56.25,43.75,43.75,Samoa
+French Polynesia,2024,PYF,430.56,0.72,65.278,34.722,34.722,French Polynesia
+Gabon,2024,GAB,523.08,2.6,64.615,35.385,35.385,Gabon
+Gambia,2024,GMB,666.67,0.51,100.0,0.0,0.0,Gambia
+Ghana,2024,GHA,468.89,24.27,63.782,36.218,36.218,Ghana
+Saudi Arabia,2024,SAU,691.95,454.64,97.84,2.16,2.16,Saudi Arabia
+Senegal,2024,SEN,539.97,7.63,80.21,19.79,19.79,Senegal
+Seychelles,2024,SYC,555.56,0.63,84.127,15.873,15.873,Seychelles
+Sierra Leone,2024,SLE,47.62,0.21,4.762,95.238,95.238,Sierra Leone
+Barbados,2024,BRB,594.6,1.11,90.991,9.009,9.009,Barbados
+Equatorial Guinea,2024,GNQ,644.3,1.49,73.154,26.846,26.846,Equatorial Guinea
+Eritrea,2024,ERI,577.78,0.45,88.889,11.111,11.111,Eritrea
+Eswatini,2024,SWZ,131.15,0.61,3.279,96.721,96.721,Eswatini
+Fiji,2024,FJI,278.26,1.15,36.522,63.478,63.478,Fiji
+Belize,2024,BLZ,170.21,0.47,12.766,87.234,87.234,Belize
+Benin,2024,BEN,584.16,1.01,96.04,3.96,3.96,Benin
+Bermuda,2024,BMU,639.34,0.61,98.361,1.639,1.639,Bermuda
+Solomon Islands,2024,SLB,636.36,0.11,90.909,9.091,9.091,Solomon Islands
+Democratic Republic of Congo,2024,COD,27.64,15.92,0.0,100.0,100.0,Democratic Republic of Congo
+Djibouti,2024,DJI,450.0,0.2,65.0,35.0,35.0,Djibouti
+East Timor,2024,TLS,666.67,0.51,100.0,0.0,0.0,East Timor
+Somalia,2024,SOM,511.63,0.43,79.07,20.93,20.93,Somalia
+South Sudan,2024,SSD,642.86,0.56,98.214,1.786,1.786,South Sudan
+Sudan,2024,SDN,153.69,14.77,20.311,79.689,79.689,Sudan
+Suriname,2024,SUR,321.84,1.74,47.126,52.874,52.874,Suriname
+Cook Islands,2024,COK,250.0,0.04,50.0,50.0,50.0,Cook Islands
+Cote d'Ivoire,2024,CIV,405.01,10.79,71.084,28.916,28.916,Cote d'Ivoire
+Cuba,2024,CUB,642.82,19.43,95.986,4.014,4.014,Cuba
+Curacao,2024,CUW,,,,,,Curacao
+Venezuela,2024,VEN,85.86,80.13,8.861,91.139,91.139,Venezuela
+Syria,2024,SYR,706.19,24.88,96.463,3.537,3.537,Syria
+Tanzania,2024,TZA,345.02,8.84,67.081,32.919,32.919,Tanzania
+Aruba,2024,ABW,550.0,1.0,83.0,17.0,17.0,Aruba
+Uganda,2024,UGA,58.52,5.81,2.926,97.074,97.074,Uganda
+Ukraine,2024,UKR,,,,,,Ukraine
+United Arab Emirates,2024,ARE,467.51,177.26,68.267,31.733,8.812,United Arab Emirates
+Zambia,2024,ZMB,119.68,19.72,12.525,87.475,87.475,Zambia
+Congo,2024,COG,716.12,5.46,79.121,20.879,20.879,Congo
+Bahamas,2024,BHS,653.33,2.25,99.111,0.889,0.889,Bahamas
+Bahrain,2024,BHR,902.24,37.95,99.736,0.264,0.264,Bahrain
+Togo,2024,TGO,422.54,0.71,70.423,29.577,29.577,Togo
+Tonga,2024,TON,571.43,0.07,85.714,14.286,14.286,Tonga
+Albania,2024,ALB,25.18,8.34,0.0,100.0,100.0,Albania
+Zimbabwe,2024,ZWE,384.02,10.26,42.885,57.115,57.115,Zimbabwe
+Argentina,2025,ARG,346.0,153.15,58.394,41.606,34.58,Argentina
+Armenia,2025,ARM,211.93,9.72,34.053,65.946,38.992,Armenia
+United Kingdom,2025,GBR,217.41,292.31,35.582,64.418,51.972,United Kingdom of Great Britain and Northern Ireland
+Costa Rica,2025,CRI,24.2,12.81,0.0,100.0,100.0,Costa Rica
+Croatia,2025,HRV,158.5,14.7,23.741,76.259,76.259,Croatia
+Cyprus,2025,CYP,489.0,5.91,72.25,27.75,27.75,Cyprus
+Czechia,2025,CZE,401.46,75.5,40.848,59.152,16.848,Czechia
+Denmark,2025,DNK,114.41,33.3,8.829,91.171,91.171,Denmark
+Dominican Republic,2025,DOM,537.48,22.68,76.19,23.81,23.81,Dominican Republic
+Ecuador,2025,ECU,159.02,36.6,20.601,79.399,79.399,Ecuador
+Egypt,2025,EGY,563.23,245.71,86.985,13.015,13.015,Egypt
+El Salvador,2025,SLV,139.32,6.46,13.467,86.533,86.533,El Salvador
+Estonia,2025,EST,319.15,6.11,40.426,59.574,59.574,Estonia
+Ethiopia,2025,ETH,23.08,33.37,0.0,100.0,100.0,Ethiopia
+Finland,2025,FIN,57.47,82.3,3.657,96.343,56.464,Finland
+France,2025,FRA,41.44,569.98,5.149,94.851,26.064,France
+Georgia,2025,GEO,145.93,13.5,20.37,79.63,79.63,Georgia
+Germany,2025,DEU,329.65,500.47,40.908,59.092,59.092,Germany
+Greece,2025,GRC,315.09,58.27,50.3,49.7,49.7,Greece
+Chile,2025,CHL,289.49,88.5,33.627,66.373,66.373,Chile
+China,2025,CHN,525.34,10583.36,58.349,41.651,37.044,China
+Colombia,2025,COL,186.81,90.36,22.975,77.025,77.025,Colombia
+Hungary,2025,HUN,163.02,40.24,24.677,75.323,35.313,Hungary
+India,2025,IND,670.13,2081.6,73.347,26.653,24.067,India
+Iran,2025,IRN,659.53,395.78,94.3,5.7,3.843,Iran
+Ireland,2025,IRL,256.54,30.95,51.858,48.142,48.142,Ireland
+Israel,2025,ISR,492.69,82.1,83.069,16.931,16.931,Israel
+Italy,2025,ITA,284.78,264.7,51.224,48.776,48.776,Italy
+Japan,2025,JPN,477.26,1029.86,67.295,32.705,23.569,Japan
+Kazakhstan,2025,KAZ,805.32,123.69,85.14,14.86,14.86,Kazakhstan
+Kenya,2025,KEN,95.44,14.04,9.972,90.028,90.028,Kenya
+Kuwait,2025,KWT,635.31,92.49,97.762,2.238,2.238,Kuwait
+Kyrgyzstan,2025,KGZ,152.73,15.78,15.272,84.728,84.728,Kyrgyzstan
+Bulgaria,2025,BGR,275.55,37.96,28.082,71.918,32.798,Bulgaria
+Cambodia,2025,KHM,498.87,17.76,59.122,40.878,40.878,Cambodia
+Canada,2025,CAN,190.72,652.44,23.023,76.977,63.9,Canada
+Latvia,2025,LVA,138.76,6.27,26.954,73.046,73.046,Latvia
+Lithuania,2025,LTU,138.36,8.89,22.385,77.615,77.615,Lithuania
+Luxembourg,2025,LUX,123.38,1.54,8.442,91.558,91.558,Luxembourg
+Malaysia,2025,MYS,601.97,201.09,79.348,20.652,20.652,Malaysia
+Malta,2025,MLT,484.02,2.19,84.018,15.982,15.982,Malta
+Mexico,2025,MEX,474.02,356.97,74.062,25.938,23.092,Mexico
+Moldova,2025,MDA,633.12,6.16,88.799,11.201,11.201,Moldova
+Mongolia,2025,MNG,816.31,9.69,91.641,8.359,8.359,Mongolia
+Montenegro,2025,MNE,264.23,2.46,24.39,75.61,75.61,Montenegro
+Morocco,2025,MAR,596.4,44.5,76.045,23.955,23.955,Morocco
+Vietnam,2025,VNM,460.73,309.99,54.582,45.418,45.418,Vietnam
+Netherlands,2025,NLD,253.56,134.96,45.843,54.157,51.2,Netherlands
+New Zealand,2025,NZL,92.76,43.34,11.467,88.533,88.533,New Zealand
+Bolivia,2025,BOL,481.29,13.63,63.903,36.097,36.097,Bolivia
+Bosnia and Herzegovina,2025,BIH,570.64,14.44,56.44,43.56,43.56,Bosnia and Herzegovina
+Brazil,2025,BRA,109.95,750.53,11.284,88.716,86.601,Brazil
+Nigeria,2025,NGA,455.71,41.54,68.681,31.319,31.319,Nigeria
+North Macedonia,2025,MKD,441.35,6.82,52.786,47.214,47.214,North Macedonia
+Norway,2025,NOR,28.11,160.81,1.001,98.999,98.999,Norway
+Oman,2025,OMN,544.47,52.84,95.458,4.542,4.542,Oman
+Pakistan,2025,PAK,346.56,195.03,45.096,54.904,42.747,Pakistan
+Paraguay,2025,PRY,24.7,45.35,0.0,100.0,100.0,Paraguay
+Peru,2025,PER,238.25,60.44,36.35,63.65,63.65,Peru
+Philippines,2025,PHL,588.29,123.12,76.689,23.311,23.311,Philippines (the)
+Poland,2025,POL,588.6,173.26,68.492,31.508,31.508,Poland
+Portugal,2025,PRT,127.91,51.13,19.049,80.951,80.951,Portugal
+Puerto Rico,2025,PRI,654.66,20.27,93.636,6.364,6.364,Puerto Rico
+Qatar,2025,QAT,581.52,56.18,95.942,4.058,4.058,Qatar
+Romania,2025,ROU,250.75,49.81,32.483,67.517,47.039,Romania
+Russia,2025,RUS,449.73,1192.79,64.316,35.684,17.353,Russia
+Serbia,2025,SRB,695.8,36.62,72.201,27.799,27.799,Serbia
+Bangladesh,2025,BGD,696.13,103.4,97.863,2.137,2.137,Bangladesh
+Belarus,2025,BLR,309.25,46.37,58.572,41.428,4.831,Belarus
+Belgium,2025,BEL,149.82,72.89,27.987,72.013,38.935,Belgium
+Singapore,2025,SGP,497.09,60.15,94.514,5.486,5.486,Singapore
+Slovakia,2025,SVK,94.85,29.1,14.845,85.155,18.729,Slovakia
+Slovenia,2025,SVN,183.29,14.84,21.092,78.908,39.623,Slovenia
+South Africa,2025,ZAF,699.29,242.76,82.159,17.841,13.635,South Africa
+South Korea,2025,KOR,417.06,624.66,60.042,39.958,10.394,Korea (Republic of)
+Spain,2025,ESP,153.6,287.89,25.36,74.64,55.858,Spain
+Sri Lanka,2025,LKA,329.28,17.25,38.377,61.623,61.623,Sri Lanka
+Sweden,2025,SWE,35.26,170.71,1.218,98.782,71.191,Sweden
+Switzerland,2025,CHE,39.22,65.02,2.307,97.693,67.825,Switzerland
+Taiwan,2025,TWN,633.21,288.39,86.633,13.367,12.24,Taiwan
+Tajikistan,2025,TJK,72.56,24.67,5.634,94.366,94.366,Tajikistan
+Australia,2025,AUS,525.18,286.34,61.382,38.618,38.618,Australia
+Austria,2025,AUT,116.91,73.22,16.403,83.597,83.597,Austria
+Azerbaijan,2025,AZE,631.9,28.09,87.86,12.14,12.14,Azerbaijan
+Thailand,2025,THA,545.74,188.24,83.425,16.575,16.575,Thailand
+Tunisia,2025,TUN,560.29,22.31,95.966,4.034,4.034,Tunisia
+Turkey,2025,TUR,474.74,353.86,56.743,43.257,43.257,Turkey
+United States,2025,USA,384.4,4519.79,56.998,43.002,25.638,United States of America
+Uruguay,2025,URY,80.4,11.94,2.178,97.822,97.822,Uruguay
+Uzbekistan,2025,UZB,1000.0,86.7,80.623,19.377,19.377,Uzbekistan
