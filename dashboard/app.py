@@ -15,6 +15,16 @@ DATA_DIR = "../data/processed"
 
 st.set_page_config(page_title="AI Data Center Sustainability & Energy Intelligence", layout="wide")
 
+# CVD-safe palette (validated: adjacent-pair CVD deltaE >= 8, normal-vision floor >= 15).
+# Categorical order is fixed — never cycle/reassign per-filter, since color must
+# follow the entity (a country/owner), not its rank in the current view.
+CATEGORICAL = ["#2a78d6", "#008300", "#e87ba4", "#eda100", "#1baf7a", "#eb6834", "#4a3aa7", "#e34948"]
+SEQUENTIAL_BLUE = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5",
+                    "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"]
+# Diverging: blue (good) <-> neutral gray <-> red (bad) — avoids RdYlGn's red-green
+# transition, which is unreadable for the two most common colorblindness types.
+DIVERGING_RED_BLUE = [[0, "#e34948"], [0.5, "#f0efec"], [1, "#2a78d6"]]
+
 EPOCH_NAME_MAP = {
     "South Korea": "Korea (Republic of)",
     "Philippines": "Philippines (the)",
@@ -77,7 +87,8 @@ with tab_overview:
         st.markdown("**Top 10 countries by GPU cluster count**")
         top10 = country.sort_values("clusters", ascending=False).head(10)
         fig = px.bar(top10, x="clusters", y="country", orientation="h",
-                     labels={"clusters": "GPU Clusters", "country": ""})
+                     labels={"clusters": "GPU Clusters", "country": ""},
+                     color_discrete_sequence=[CATEGORICAL[0]])
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=400)
         st.plotly_chart(fig, use_container_width=True)
     with right:
@@ -85,7 +96,8 @@ with tab_overview:
         top_owners = dc["owner_name"].value_counts().head(10).reset_index()
         top_owners.columns = ["owner", "count"]
         fig = px.bar(top_owners, x="count", y="owner", orientation="h",
-                     labels={"count": "Data Centers", "owner": ""})
+                     labels={"count": "Data Centers", "owner": ""},
+                     color_discrete_sequence=[CATEGORICAL[0]])
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=400)
         st.plotly_chart(fig, use_container_width=True)
 
@@ -121,7 +133,7 @@ with tab_map:
     tick_vals = [0, 1, 2, 3]
     tick_text = ["1", "10", "100", "1000"]
     fig = px.choropleth(choropleth_source, locations="iso_code", color="log_clusters",
-                         color_continuous_scale="YlOrRd", hover_name="country",
+                         color_continuous_scale=SEQUENTIAL_BLUE, hover_name="country",
                          hover_data={"clusters": True, "log_clusters": False, "iso_code": False})
     fig.update_geos(showcountries=True, countrycolor="lightgray", landcolor="whitesmoke")
     fig.update_layout(height=450, margin=dict(l=0, r=0, t=10, b=0),
@@ -136,7 +148,8 @@ with tab_map:
     fig2 = px.scatter_geo(geo, lat="latitude", lon="longitude", size="size_mw",
                            hover_name="name", hover_data={"owner": True, "country": True, "power_capacity_mw": True,
                                                            "size_mw": False, "latitude": False, "longitude": False},
-                           color="country" if selected_countries else None, opacity=0.7)
+                           color="country" if selected_countries else None,
+                           color_discrete_sequence=CATEGORICAL, opacity=0.7)
     fig2.update_layout(height=450, margin=dict(l=0, r=0, t=10, b=0))
     st.plotly_chart(fig2, use_container_width=True)
 
@@ -148,14 +161,16 @@ with tab_energy:
         st.markdown("**Electricity price by country (lowest 15 among active AI hosts)**")
         cheapest = country_active.dropna(subset=["price_usd_per_kwh"]).sort_values("price_usd_per_kwh").head(15)
         fig = px.bar(cheapest, x="price_usd_per_kwh", y="country", orientation="h",
-                     labels={"price_usd_per_kwh": "USD/kWh", "country": ""})
+                     labels={"price_usd_per_kwh": "USD/kWh", "country": ""},
+                     color_discrete_sequence=[CATEGORICAL[0]])
         fig.update_layout(yaxis={"categoryorder": "total descending"}, height=450)
         st.plotly_chart(fig, use_container_width=True)
     with c2:
         st.markdown("**Renewable energy share by country**")
         renew = country_active.dropna(subset=["renewables_share_elec"]).sort_values("renewables_share_elec", ascending=False)
         fig = px.bar(renew, x="renewables_share_elec", y="country", orientation="h",
-                     labels={"renewables_share_elec": "Renewable %", "country": ""})
+                     labels={"renewables_share_elec": "Renewable %", "country": ""},
+                     color_discrete_sequence=[CATEGORICAL[1]])
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=450)
         st.plotly_chart(fig, use_container_width=True)
 
@@ -163,7 +178,7 @@ with tab_energy:
     emissions = country_active.dropna(subset=["co2", "carbon_intensity_elec"])
     fig = px.scatter(emissions, x="renewables_share_elec", y="carbon_intensity_elec", size="co2",
                       color="co2_per_capita", hover_name="country", size_max=50,
-                      color_continuous_scale="Reds",
+                      color_continuous_scale=SEQUENTIAL_BLUE,
                       labels={"renewables_share_elec": "Renewable Share (%)",
                               "carbon_intensity_elec": "Carbon Intensity (gCO2/kWh)",
                               "co2_per_capita": "CO2 per capita (t)"})
@@ -180,14 +195,15 @@ with tab_infra:
     top5_names = dc.sort_values("current_power_mw", ascending=False).head(5)["name"]
     top5_timeline = timelines[timelines["data_center"].isin(top5_names)]
     fig = px.line(top5_timeline.sort_values("date"), x="date", y="power_mw", color="data_center", markers=True,
-                  labels={"power_mw": "Power (MW)", "date": "Date", "data_center": "Site"})
+                  labels={"power_mw": "Power (MW)", "date": "Date", "data_center": "Site"},
+                  color_discrete_sequence=CATEGORICAL)
     fig.update_layout(height=450)
     st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("**Provider comparison — footprint by total power capacity**")
     owner_power = gpu.dropna(subset=["owner"]).groupby("owner")["power_capacity_mw"].sum().sort_values(ascending=False).head(15).reset_index()
     fig = px.treemap(owner_power, path=["owner"], values="power_capacity_mw",
-                      labels={"power_capacity_mw": "MW"})
+                      labels={"power_capacity_mw": "MW"}, color_discrete_sequence=CATEGORICAL)
     fig.update_layout(height=450, margin=dict(l=0, r=0, t=10, b=0))
     st.plotly_chart(fig, use_container_width=True)
 
@@ -197,7 +213,8 @@ with tab_infra:
     cs["score"] = (-z(cs["price_usd_per_kwh"]) + z(cs["renewables_share_elec"]) - z(cs["carbon_intensity_elec"])) / 3
     cs = cs.sort_values("score", ascending=False)
     fig = px.bar(cs, x="score", y="country", orientation="h", color="score",
-                 color_continuous_scale="RdYlGn", labels={"score": "Balance Score", "country": ""})
+                 color_continuous_scale=DIVERGING_RED_BLUE, color_continuous_midpoint=0,
+                 labels={"score": "Balance Score", "country": ""})
     fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=650, coloraxis_showscale=False,
                        margin=dict(l=0, r=0, t=10, b=0))
     st.plotly_chart(fig, use_container_width=True)
@@ -223,7 +240,8 @@ with tab_compare:
             span = norm[m].max() - norm[m].min()
             norm[m] = 50 if span == 0 else (norm[m] - norm[m].min()) / span * 100
         norm = norm.rename(columns=labels).reset_index().melt(id_vars="country", var_name="metric", value_name="normalized")
-        fig = px.line_polar(norm, r="normalized", theta="metric", color="country", line_close=True)
+        fig = px.line_polar(norm, r="normalized", theta="metric", color="country", line_close=True,
+                             color_discrete_sequence=CATEGORICAL)
         fig.update_layout(height=500, polar=dict(radialaxis=dict(visible=True, range=[0, 100])))
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Radar values are min-max normalized across the selected countries only (0-100), "
