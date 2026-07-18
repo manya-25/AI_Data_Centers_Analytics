@@ -17,6 +17,7 @@ grid sustainability together, so this project combines three:
 |---|---|---|
 | [Epoch AI — AI Data Centers](https://epoch.ai/data/ai-data-centers) | 6 datasets: data centers, GPU clusters, build-out timelines, chip deployments, chillers, cooling towers | [CC BY](https://creativecommons.org/licenses/by/4.0/) — see Licensing below |
 | [Our World in Data — Energy](https://github.com/owid/energy-data) | Renewable share of electricity, carbon intensity, by country/year | Open, CC BY |
+| [Our World in Data — CO2](https://github.com/owid/co2-data) | Total CO2 emissions, CO2 per capita, by country/year | Open, CC BY |
 | [GlobalPetrolPrices.com](https://www.globalpetrolprices.com/electricity_prices/) | Residential electricity price by country (USD/kWh) | Manually compiled snapshot, 2023-2026 average — no free bulk API exists, so this is transcribed and not a live feed |
 
 ## Repository structure
@@ -28,6 +29,9 @@ data/
 notebooks/
   clean_data_centers.ipynb   # data pipeline: raw/ -> processed/
   02_EDA.ipynb                # the analysis itself
+dashboard/
+  app.py                      # Streamlit dashboard
+  requirements.txt
 ```
 
 ## How to run
@@ -35,9 +39,30 @@ notebooks/
 1. `notebooks/clean_data_centers.ipynb` — Run All. Regenerates every file in
    `data/processed/` from `data/raw/`.
 2. `notebooks/02_EDA.ipynb` — Run All. Reads only from `data/processed/`.
+3. Dashboard (needs step 1 done first):
+   ```
+   pip install -r dashboard/requirements.txt
+   cd dashboard
+   streamlit run app.py
+   ```
 
 Each notebook has its own overview cell at the top explaining its inputs,
 outputs, and structure in more detail.
+
+## Dashboard
+
+`dashboard/app.py` is a Streamlit app with 5 tabs, built on top of the same
+`data/processed/` files the notebooks use:
+
+- **🌍 Overview** — KPI cards (total sites, capacity, countries, avg. renewable share) plus top-10 breakdowns by country and owner
+- **🗺️ Interactive Map** — a true choropleth of GPU cluster concentration by country (log-scaled color, since the US/China otherwise wash out every other country), plus a filterable scatter map of individual sites (filter by operator or country)
+- **⚡ Energy Analysis** — electricity price and renewable share by country, plus a bubble chart of carbon intensity vs. renewable share (bubble size = total national CO2 emissions)
+- **📈 AI Infrastructure** — capacity build-out over time, provider footprint (treemap), and the cost+sustainability ranking from question 8/5
+- **🔍 Country Comparison** — pick 2+ countries, get a side-by-side metrics table and a normalized radar chart (defaults to Germany/France/Netherlands, per the original project brief)
+
+Verified working end-to-end (launched, clicked through all 5 tabs, checked
+for errors) before being committed — screenshots weren't kept in the repo to
+avoid bloating it, but the app is a straightforward `streamlit run` away.
 
 ## The 10 analytical questions
 
@@ -63,10 +88,14 @@ written finding:
   point-in-time snapshot — treat it as directional.
 - **Two AI infrastructure tables, two different pictures.** `data_centers_clean.csv`
   is Epoch AI's curated set of the largest/most notable sites (74, heavily
-  US-weighted); `gpu_clusters_clean.csv` is a broader global survey (482). The
-  notebook uses whichever is more appropriate per question and says so.
-- **No interactive dashboard yet.** Everything above is notebook output
-  (matplotlib/seaborn), not a deployed Streamlit/Plotly app.
+  US-weighted); `gpu_clusters_clean.csv` is a broader global survey (482). Both
+  the notebook and the dashboard use whichever is more appropriate per
+  question and say so.
+- **Dashboard runs locally only.** It's not deployed anywhere public (e.g.
+  Streamlit Community Cloud) — running it requires cloning the repo.
+- **~60 of 482 GPU cluster sites have no reported power capacity.** They still
+  appear on the interactive map (as small dots) but contribute 0 to
+  capacity-based totals.
 
 ## Licensing
 
